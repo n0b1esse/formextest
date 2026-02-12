@@ -3,45 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formex — B2B Системы</title>
+    <title>Formex — Алюминиевые профильные системы</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+
+<header class="main-header">
+    <div class="container header-flex">
         <div class="logo">FORM<span>EX</span></div>
-        <nav id="main-nav">
+        <nav class="desktop-nav">
             <ul>
-                <li><a href="#about">О компании</a></li>
-                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#catalog">Продукция</a></li>
                 <li><a href="#solutions">Решения</a></li>
+                <li><a href="#production">Производство</a></li>
                 <li><a href="#contacts">Контакты</a></li>
             </ul>
         </nav>
-        <button class="btn-primary" id="openForm">Запрос КП</button>
-    </header>
+        <div class="header-actions">
+            <a href="tel:+996773411114" class="phone-link">+996 (773) 41 11 14</a>
+            <button class="btn-red" id="openForm">Запросить КП</button>
+        </div>
+    </div>
+</header>
 
-    <main>
-        <section class="hero">
-            <h1>Комплексные алюминиевые решения</h1>
-            <p>Для девелоперов и архитекторов</p>
-        </section>
-
-        <div id="modalForm" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Оставить заявку</h2>
-                <form id="leadForm">
-                    <input type="text" name="name" placeholder="Имя*" required>
-                    <input type="tel" name="phone" placeholder="Телефон*" required>
-                    <input type="text" name="company" placeholder="Компания">
-                    <input type="email" name="email" placeholder="Email">
-                    <textarea name="comment" placeholder="Ваш комментарий"></textarea>
-                    <button type="submit" class="btn-submit">Отправить в отдел продаж</button>
-                </form>
+<section class="hero-banner">
+    <div class="container">
+        <div class="hero-content">
+            <span class="badge">B2B Решения</span>
+            <h1>Надежные алюминиевые системы <br>для масштабных проектов</h1>
+            <p>Комплексные поставки профиля для окон, дверей и фасадов. Производство и анодирование в Бишкеке.</p>
+            <div class="hero-btns">
+                <a href="#catalog" class="btn-red">Перейти в каталог</a>
+                <a href="#about" class="btn-outline">О компании</a>
             </div>
         </div>
-    </main>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+<section id="catalog" class="section">
+    <div class="container">
+        <h2 class="section-title">Каталог продукции</h2>
+        <div class="catalog-grid">
+            <div class="category-card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=500');"></div>
+                <h3>Фасадные системы</h3>
+                <p>Остекление зданий любой сложности.</p>
+                <a href="#" class="more-link">Подробнее →</a>
+            </div>
+            <div class="category-card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&q=80&w=500');"></div>
+                <h3>Окна и двери</h3>
+                <p>Теплые и холодные серии профилей.</p>
+                <a href="#" class="more-link">Подробнее →</a>
+            </div>
+            <div class="category-card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&q=80&w=500');"></div>
+                <h3>Перегородки</h3>
+                <p>Офисные и интерьерные решения.</p>
+                <a href="#" class="more-link">Подробнее →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-box">
+            <h2>Станьте нашим дилером</h2>
+            <p>Специальные условия для строителей и архитекторов Кыргызстана и СНГ.</p>
+            <button class="btn-white" onclick="document.getElementById('openForm').click()">Оставить заявку</button>
+        </div>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <div class="container footer-grid">
+        <div class="footer-info">
+            <div class="logo">FORM<span>EX</span></div>
+            <p>Бишкек, ул. Чолпонатинская 2а</p>
+        </div>
+        <div class="footer-nav">
+            <h4>Навигация</h4>
+            <ul>
+                <li><a href="#">Документация</a></li>
+                <li><a href="#">Проекты</a></li>
+                <li><a href="#">Партнерам</a></li>
+            </ul>
+        </div>
+        <div class="footer-contacts">
+            <h4>Связаться с нами</h4>
+            <p>info@formex.kg</p>
+            <p>+996 (773) 41 11 14</p>
+        </div>
+    </div>
+</footer>
+
+<div id="modalForm" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Запрос предложения</h2>
+        <form id="leadForm">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Ваше имя*" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" name="phone" placeholder="Телефон*" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="company" placeholder="Название компании">
+            </div>
+            <textarea name="comment" placeholder="Ваш запрос"></textarea>
+            <button type="submit" class="btn-red full-width">Отправить данные</button>
+            <p class="privacy-note">Нажимая кнопку, вы соглашаетесь на обработку ПДн.</p>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
