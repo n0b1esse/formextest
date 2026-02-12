@@ -1,33 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Работа с модальным окном
     const modal = document.getElementById('modalForm');
-    const btn = document.getElementById('openForm');
-    const span = document.getElementsByClassName('close')[0];
-    const form = document.getElementById('leadForm');
+    const openBtn = document.getElementById('openForm');
+    const closeBtn = document.querySelector('.close');
 
-    // Открытие модалки
-    btn.onclick = () => modal.style.display = "block";
+    openBtn.onclick = () => modal.style.display = "block";
+    closeBtn.onclick = () => modal.style.display = "none";
+    
+    window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
 
-    // Закрытие
-    span.onclick = () => modal.style.display = "none";
-    window.onclick = (event) => { if (event.target == modal) modal.style.display = "none"; }
-
-    // Обработка формы (ТЗ: Email + CRM)
-    form.onsubmit = async (e) => {
-        e.preventDefault();
-        
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
-
-        console.log("Данные подготовлены для отправки:", data);
-
-        // Имитация отправки
-        try {
-            // Здесь в будущем будет fetch('/api/crm')
-            alert("Заявка принята! Копия отправлена на info@formex.kg");
-            modal.style.display = "none";
-            form.reset();
-        } catch (error) {
-            console.error("Ошибка CRM, дублирование на Email...", error);
-        }
-    };
+    // Плавная прокрутка
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 });
