@@ -1,0 +1,31 @@
+:root {
+    --deep-red: #B32B47;   /* R179 G43 B71 [cite: 93] */
+    --black-100: #000000;
+    --black-20: #8B9196;   /* R139 G145 B150 [cite: 96] */
+    --white: #FFFFFF;
+}
+
+body { font-family: 'Helvetica World', sans-serif; color: var(--black-100); }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background: var(--white);
+    border-bottom: 2px solid var(--black-100);
+}
+
+.logo span { color: var(--deep-red); }
+
+.btn-primary {
+    background-color: var(--deep-red);
+    color: var(--white);
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Модальное окно */
+.modal { display: none; position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
+.modal-content { background: var(--white); margin: 10% auto; padding: 30px; width: 400px; border-top: 5px solid var(--deep-red); }
