@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formex — B2B Системы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FORM<span>EX</span></div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#about">О компании</a></li>
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#solutions">Решения</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <button class="btn-primary" id="openForm">Запрос КП</button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Комплексные алюминиевые решения</h1>
+            <p>Для девелоперов и архитекторов</p>
+        </section>
+
+        <div id="modalForm" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Оставить заявку</h2>
+                <form id="leadForm">
+                    <input type="text" name="name" placeholder="Имя*" required>
+                    <input type="tel" name="phone" placeholder="Телефон*" required>
+                    <input type="text" name="company" placeholder="Компания">
+                    <input type="email" name="email" placeholder="Email">
+                    <textarea name="comment" placeholder="Ваш комментарий"></textarea>
+                    <button type="submit" class="btn-submit">Отправить в отдел продаж</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
